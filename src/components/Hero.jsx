@@ -1,3 +1,4 @@
+import hero_illustration from "../assets/hero-illustration.svg";
 import { Zap, ArrowRight } from "lucide-react";
 
 const Hero = () => {
@@ -21,7 +22,9 @@ const Hero = () => {
           </div>
           <p className="text-neutral-500">Free 14-day trial. No credit card required.</p>
         </div>
-        <div></div>
+        <div className="w-1/2 px-8">
+          <img src={hero_illustration} alt="" draggable="false" className="h-full w-full object-contain" />
+        </div>
       </div>
     </div>
   );
