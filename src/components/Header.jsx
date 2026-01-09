@@ -2,14 +2,14 @@ import logo from "../assets/logo.png";
 
 const Header = () => {
   return (
-    <header className="h-16 border-b border-neutral-200 w-full fixed top-0 px-4">
-      <div className="max-w-7xl mx-auto h-full flex justify-between items-center">
+    <header className="h-16 border-b border-neutral-200 w-full fixed top-0 bg-white">
+      <div className="max-w-7xl mx-auto h-full flex justify-between items-center px-8">
         <div className="flex justify-start items-center gap-4 cursor-pointer">
           <img src={logo} alt="Logo" className="h-10 rounded-xl" />
           <h1 className="font-semibold text-2xl">XENO</h1>
         </div>
-        <nav className="flex gap-8 items-center">
-          <ul className="flex gap-4 text-neutral-700">
+        <nav className="flex gap-12 items-center">
+          <ul className="flex gap-10 text-neutral-700">
             <li>
               <a href="#" className="cursor-pointer">
                 Features
