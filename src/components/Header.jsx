@@ -27,8 +27,8 @@ const Header = () => {
             </li>
           </ul>
           <div className="flex gap-8">
-            <button className="text-blue-500 cursor-pointer">Sign In</button>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer">Start Free Trial</button>
+            <button className="text-indigo-500 cursor-pointer">Sign In</button>
+            <button className="bg-indigo-500 text-white px-4 py-2 rounded-md cursor-pointer">Start Free Trial</button>
           </div>
         </nav>
       </div>
