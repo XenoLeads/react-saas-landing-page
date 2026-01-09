@@ -9,7 +9,7 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <>
+    <div className="w-full overflow-hidden">
       <Header />
       <Hero />
       <SocialProofLogoBar />
@@ -18,7 +18,7 @@ function App() {
       <Testimonials />
       <CTA />
       <Footer />
-    </>
+    </div>
   );
 }
 

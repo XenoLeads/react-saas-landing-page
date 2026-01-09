@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 #root {
   --container-height: 100vh;
   --dynamic-container-height: 100dvh;
