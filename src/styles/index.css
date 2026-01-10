@@ -5,4 +5,5 @@
   --dynamic-container-height: 100dvh;
   width: 100%;
   height: var(--dynamic-container-height, --container-height);
+  scroll-margin-top: 4rem;
 }
