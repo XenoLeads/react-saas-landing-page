@@ -53,9 +53,9 @@ function FeatureCard({ feature }) {
   );
 }
 
-const Features = () => {
+const Features = ({ ref }) => {
   return (
-    <div className="w-full">
+    <div className="w-full" ref={ref}>
       <div className="max-w-7xl flex flex-col mx-auto gap-12 py-20">
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="font-semibold text-4xl text-center mt-20">Everything you need to succeed</h2>

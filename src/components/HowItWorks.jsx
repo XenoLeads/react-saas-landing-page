@@ -15,9 +15,9 @@ const get_started_steps = [
   },
 ];
 
-const HowItWorks = () => {
+const HowItWorks = ({ ref }) => {
   return (
-    <div className="w-full bg-neutral-100">
+    <div className="w-full bg-neutral-100" ref={ref}>
       <div className="max-w-7xl mx-auto py-20 flex flex-col justify-start items-center">
         <div className="flex flex-col justify-center items-center gap-2 w-full">
           <h2 className="text-4xl font-semibold text-center">Get started in minutes</h2>

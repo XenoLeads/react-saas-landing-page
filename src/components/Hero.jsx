@@ -1,9 +1,9 @@
 import hero_illustration from "../assets/hero-illustration.svg";
 import { Zap, ArrowRight } from "lucide-react";
 
-const Hero = () => {
+const Hero = ({ ref }) => {
   return (
-    <div className="w-full h-170 pt-16">
+    <div className="w-full h-170 pt-16" ref={ref}>
       <div className="max-w-7xl mx-auto h-full px-8 flex justify-between items-center">
         <div className="w-1/2 flex flex-col gap-6">
           <div className="w-fit bg-indigo-100 inline-flex justify-start items-center text-indigo-800 px-4 py-1 text-sm gap-2 rounded-full">
