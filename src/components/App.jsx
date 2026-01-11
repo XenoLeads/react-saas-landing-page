@@ -77,8 +77,8 @@ function App() {
     }
     const options = {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
+      rootMargin: "0px 0px -20% 0px",
+      threshold: 0,
     };
     const observer = new IntersectionObserver(observer_callback, options);
     elements.current.forEach(el => observer.observe(el));
