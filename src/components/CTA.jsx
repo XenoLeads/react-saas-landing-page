@@ -18,7 +18,7 @@ const CTA = () => {
             Schedule a Demo
           </button>
         </div>
-        <p className="text-indigo-200">14-day free trial • No credit card required • Cancel anytime</p>
+        <p className="text-indigo-200 text-center">14-day free trial • No credit card required • Cancel anytime</p>
       </div>
     </div>
   );
