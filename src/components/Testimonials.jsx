@@ -36,7 +36,7 @@ function get_name_initials(name) {
 const Testimonials = () => {
   return (
     <div className="w-full">
-      <div className="max-w-7xl mx-auto py-20 flex flex-col gap-12">
+      <div className="max-w-7xl mx-auto py-20 flex flex-col gap-12 px-8">
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="font-semibold text-4xl">Loved by teams everywhere</h2>
           <h3 className="text-xl text-neutral-600">See what our customers have to say about TaskFlow.</h3>

@@ -56,14 +56,14 @@ function FeatureCard({ feature }) {
 const Features = ({ ref }) => {
   return (
     <div className="w-full scroll-mt-16" ref={ref}>
-      <div className="max-w-7xl flex flex-col mx-auto gap-12 py-20">
+      <div className="max-w-7xl flex flex-col mx-auto gap-12 py-20 px-8">
         <div className="flex flex-col justify-center items-center gap-4">
           <h2 className="font-semibold text-4xl text-centers">Everything you need to succeed</h2>
           <h3 className="text-xl max-w-1/2 text-center text-neutral-600">
             Powerful features designed to help your team collaborate better and ship faster.
           </h3>
         </div>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 max-lg:grid-cols-2 gap-8 ">
           {features_content.map(feature => {
             return <FeatureCard key={feature.id} feature={feature} />;
           })}

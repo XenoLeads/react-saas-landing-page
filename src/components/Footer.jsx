@@ -18,7 +18,7 @@ const footer_links = [
 const Footer = ({ ref }) => {
   return (
     <div className="w-full bg-gray-900 text-white" ref={ref}>
-      <div className="max-w-7xl mx-auto py-12  flex flex-col gap-8">
+      <div className="max-w-7xl mx-auto py-12  flex flex-col gap-8 px-8">
         <div className="grid grid-cols-4 items-start gap-8">
           <div className="flex flex-col gap-2">
             <div className="flex justify-start items-center gap-4">
