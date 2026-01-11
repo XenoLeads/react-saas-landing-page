@@ -52,17 +52,20 @@ const Header = ({ scroll_to }) => {
           </button>
 
           <div
-            className={`md:hidden fixed left-0 top-0 mt-16 h-auto w-full overflow-hidden grid grid-rows-[0fr] justify-center items-start transition-[grid-template-rows] duration-500 bg-neutral-100 text-center border-b-2 border-b-neutral-200 ${
+            className={`md:hidden fixed left-0 top-0 mt-16 h-auto w-full overflow-hidden grid grid-rows-[0fr] justify-center items-start transition-[grid-template-rows] duration-400 bg-neutral-50 text-center border-b border-b-neutral-200 ${
               isToggledNavbar ? "pointer-events-auto grid-rows-[1fr]" : "pointer-events-none"
             }`}
           >
-            <div className="overflow-hidden">
-              <div className="w-fit flex flex-col gap-6 py-8">
+            <div className="overflow-hidden flex justify-center items-start w-screen border-b border-b-neutral-200">
+              <div className="w-fit flex flex-col gap-6 py-8 ">
                 <ul className="flex flex-col gap-6 text-neutral-700 text-nowrap">
                   <li>
                     <a
                       className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
-                      onClick={scroll_to}
+                      onClick={event => {
+                        scroll_to(event);
+                        setIsToggledNavbar(false);
+                      }}
                       data-scroll-to="features"
                     >
                       Features
@@ -71,7 +74,10 @@ const Header = ({ scroll_to }) => {
                   <li>
                     <a
                       className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
-                      onClick={scroll_to}
+                      onClick={event => {
+                        scroll_to(event);
+                        setIsToggledNavbar(false);
+                      }}
                       data-scroll-to="how-it-works"
                     >
                       How it Works
@@ -80,7 +86,10 @@ const Header = ({ scroll_to }) => {
                   <li>
                     <a
                       className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
-                      onClick={scroll_to}
+                      onClick={event => {
+                        scroll_to(event);
+                        setIsToggledNavbar(false);
+                      }}
                       data-scroll-to="about"
                     >
                       About
