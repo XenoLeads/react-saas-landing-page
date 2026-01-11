@@ -10,7 +10,7 @@
 
 @theme {
   --transition-duration-250: 250ms;
-  --animate-infinite-scroll: infinite-scroll 30s linear infinite;
+  --animate-infinite-scroll: infinite-scroll 60s linear infinite;
   --animate-top-fade-in: top-fade-in 0.5s ease both;
   --animate-left-fade-in: left-fade-in 0.5s ease both;
   @keyframes infinite-scroll {
