@@ -1,4 +1,4 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useEffect } from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import SocialProofLogoBar from "./SocialProofLogoBar";
@@ -40,10 +40,46 @@ function App() {
     });
   }, []);
 
+  // Smooth Fade In on Scroll Setup
+  const elements = useRef(new Set());
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const section = entry.target.dataset.section;
+          switch (section) {
+            case "hero": {
+              const stagger = Number(entry.target.dataset.stagger || 0);
+              const children = [...entry.target.children];
+              children.map((child, index) => {
+                child.style.animationDelay = `${stagger * index}ms`;
+                child.classList.add("animate-top-fade-in");
+              });
+            }
+          }
+          // const animation_type = entry.target.dataset.animationType;
+          // const stagger = Number(entry.target.dataset.stagger || 250);
+          // const children = [...entry.target.children].filter(el => el.hasAttribute("data-animate"));
+          // children.map((child, index) => {
+          //   child.style.animationDelay = `${stagger * index}ms`;
+          //   child.classList.add(`animate-${animation_type}`);
+          // });
+        }
+      });
+    });
+
+    elements.current.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const register = useCallback(el => (el ? elements.current.add(el) : elements.current.delete(el)), []);
+
   return (
     <div className="w-full overflow-hidden">
       <Header scroll_to={scroll_to} />
-      <Hero ref={hero_ref} />
+      <Hero ref={hero_ref} register={register} />
       <SocialProofLogoBar />
       <Features ref={features_ref} />
       <HowItWorks ref={how_it_works_ref} />
