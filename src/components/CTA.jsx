@@ -11,10 +11,10 @@ const CTA = () => {
           </h3>
         </div>
         <div className="flex max-sm:flex-col justify-center items-center gap-4 max-sm:w-full">
-          <button className="bg-white text-indigo-500 px-8 py-4 rounded-lg flex gap-4 cursor-pointer font-semibold justify-center items-center max-sm:w-full">
-            Start Free Trial <ArrowRight />
+          <button className="group bg-white hover:bg-neutral-200 transition-[background-color] smooth-timing text-indigo-500 px-8 py-4 rounded-lg flex gap-4 cursor-pointer font-semibold justify-center items-center max-sm:w-full">
+            Start Free Trial <ArrowRight className="group-hover:translate-x-2 transition-[translate] smooth-timing" />
           </button>
-          <button className="px-8 py-4 border-2 rounded-lg border-white text-white cursor-pointer font-semibold max-sm:w-full">
+          <button className="px-8 py-4 border-2 rounded-lg border-white text-white cursor-pointer font-semibold max-sm:w-full hover:bg-black/10 transition[background-color] smooth-timing">
             Schedule a Demo
           </button>
         </div>
