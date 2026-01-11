@@ -4,7 +4,7 @@ import { Zap, ArrowRight } from "lucide-react";
 const Hero = ({ ref, register }) => {
   return (
     <div className="w-full pt-16" ref={ref}>
-      <div className="max-w-7xl mx-auto h-full px-8 max-sm:px-4 flex max-lg:flex-col justify-between items-center py-20">
+      <div className="max-w-7xl mx-auto h-full px-8 max-sm:px-4 flex max-lg:flex-col justify-between items-center py-20 max-md:py-10">
         <div className="w-1/2 max-lg:w-full max-lg:gap-8 flex flex-col gap-6" ref={register} data-section="default" data-stagger="50">
           <div className="w-fit bg-indigo-100 inline-flex justify-start items-center text-indigo-800 px-4 py-1 text-sm gap-2 rounded-full">
             <Zap strokeWidth={1} size={16} />
