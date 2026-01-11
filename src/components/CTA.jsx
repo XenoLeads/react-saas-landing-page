@@ -4,9 +4,9 @@ const CTA = () => {
   return (
     <div className="w-full bg-indigo-600">
       <div className="max-w-7xl mx-auto py-20 flex flex-col items-center gap-8 px-4">
-        <div className="text-white flex flex-col justify-start items-center gap-8">
+        <div className="text-white flex flex-col justify-start items-center gap-8 text-center">
           <h2 className="text-5xl max-md:text-4xl max-sm:text-3xl font-bold">Ready to transform your workflow?</h2>
-          <h3 className="text-indigo-100 w-95/100 text-xl max-sm:text-lg text-center">
+          <h3 className="text-indigo-100 w-95/100 text-xl max-sm:text-lg">
             Join thousands of teams who have already made the switch to TaskFlow. Start your free trial today.
           </h3>
         </div>
