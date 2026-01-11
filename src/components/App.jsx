@@ -44,6 +44,20 @@ function App() {
   const elements = useRef(new Set());
 
   useEffect(() => {
+    let scroll_id = null;
+    const auto_scroll = () => {
+      window.scrollBy(0, 1);
+      scroll_id = requestAnimationFrame(auto_scroll);
+    };
+    const toggle_scroll = event => {
+      if (event.code === "KeyF") {
+        if (scroll_id) {
+          cancelAnimationFrame(scroll_id);
+          scroll_id = null;
+        } else scroll_id = requestAnimationFrame(auto_scroll, 10);
+      }
+    };
+    window.addEventListener("keydown", toggle_scroll);
     function observer_callback(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -103,7 +117,10 @@ function App() {
     }
     set_initial_state();
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.addEventListener("keydown", toggle_scroll);
+    };
   }, []);
 
   const register = useCallback(el => (el ? elements.current.add(el) : elements.current.delete(el)), []);
