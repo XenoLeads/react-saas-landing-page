@@ -15,10 +15,12 @@ const Hero = ({ ref }) => {
             TaskFlow brings your team together with powerful project management tools that are simple enough for anyone to use. Get more done, faster.
           </h2>
           <div className="flex max-sm:flex-col gap-4 font-semibold items-center">
-            <button className="bg-indigo-500 text-white px-8 py-4 rounded-lg flex gap-4 cursor-pointer max-sm:w-full justify-center items-center">
-              Start Free Trial <ArrowRight />
+            <button className="bg-indigo-500 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg flex gap-4 cursor-pointer max-sm:w-full justify-center items-center transition-[background-color] smooth-timing group">
+              Start Free Trial <ArrowRight className="group-hover:translate-x-2 transition-[translate] smooth-timing" />
             </button>
-            <button className="px-8 py-4 border-2 rounded-lg border-neutral-400 text-neutral-600 cursor-pointer max-sm:w-full">Watch Demo</button>
+            <button className="px-8 py-4 border-2 rounded-lg border-neutral-400 hover:border-neutral-700 text-neutral-600 hover:text-neutral-900 cursor-pointer max-sm:w-full transition-[color,border-color] smooth-timing">
+              Watch Demo
+            </button>
           </div>
           <p className="text-neutral-500">Free 14-day trial. No credit card required.</p>
         </div>
