@@ -44,7 +44,7 @@ function App() {
   const elements = useRef(new Set());
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
+    function observer_callback(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const element = entry.target;
@@ -75,8 +75,13 @@ function App() {
           }
         }
       });
-    });
-
+    }
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+    const observer = new IntersectionObserver(observer_callback, options);
     elements.current.forEach(el => observer.observe(el));
 
     return () => observer.disconnect();
