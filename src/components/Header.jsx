@@ -52,45 +52,47 @@ const Header = ({ scroll_to }) => {
           </button>
 
           <div
-            className={`md:hidden fixed left-0 top-0 mt-16 h-auto w-full flex justify-center items-center bg-neutral-100 text-center py-8 ${
-              isToggledNavbar ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-8 opacity-0"
+            className={`md:hidden fixed left-0 top-0 mt-16 h-auto w-full overflow-hidden grid grid-rows-[0fr] justify-center items-start transition-[grid-template-rows] duration-500 bg-neutral-100 text-center border-b-2 border-b-neutral-200 ${
+              isToggledNavbar ? "pointer-events-auto grid-rows-[1fr]" : "pointer-events-none"
             }`}
           >
-            <div className="w-fit flex flex-col gap-6 ">
-              <ul className="flex flex-col gap-6   text-neutral-700 text-nowrap">
-                <li>
-                  <a
-                    className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
-                    onClick={scroll_to}
-                    data-scroll-to="features"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
-                    onClick={scroll_to}
-                    data-scroll-to="how-it-works"
-                  >
-                    How it Works
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
-                    onClick={scroll_to}
-                    data-scroll-to="about"
-                  >
-                    About
-                  </a>
-                </li>
-              </ul>
-              <div className="flex flex-col gap-4 text-nowrap">
-                <button className="text-indigo-500 hover:text-indigo-700 transition-[color] smooth-timing cursor-pointer">Sign In</button>
-                <button className="bg-indigo-500 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-[background-color] smooth-timing cursor-pointer">
-                  Start Free Trial
-                </button>
+            <div className="overflow-hidden">
+              <div className="w-fit flex flex-col gap-6 py-8">
+                <ul className="flex flex-col gap-6 text-neutral-700 text-nowrap">
+                  <li>
+                    <a
+                      className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                      onClick={scroll_to}
+                      data-scroll-to="features"
+                    >
+                      Features
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                      onClick={scroll_to}
+                      data-scroll-to="how-it-works"
+                    >
+                      How it Works
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                      onClick={scroll_to}
+                      data-scroll-to="about"
+                    >
+                      About
+                    </a>
+                  </li>
+                </ul>
+                <div className="flex flex-col gap-4 text-nowrap">
+                  <button className="text-indigo-500 hover:text-indigo-700 transition-[color] smooth-timing cursor-pointer">Sign In</button>
+                  <button className="bg-indigo-500 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-[background-color] smooth-timing cursor-pointer">
+                    Start Free Trial
+                  </button>
+                </div>
               </div>
             </div>
           </div>
