@@ -21,7 +21,7 @@ const HowItWorks = ({ ref }) => {
       <div className="max-w-7xl mx-auto py-20 flex flex-col justify-start items-center px-8">
         <div className="flex flex-col justify-center items-center gap-2 w-full">
           <h2 className="text-4xl font-semibold text-center">Get started in minutes</h2>
-          <h3 className="text-xl max-w-1/2 text-center text-neutral-500">Three simple steps to transform how your team works together.</h3>
+          <h3 className="text-xl sm:max-w-1/2 text-center text-neutral-500">Three simple steps to transform how your team works together.</h3>
         </div>
         <div className="w-full grid grid-cols-3 max-md:grid-cols-1 gap-8 mt-8">
           {get_started_steps.map(({ title, description }, index) => (
