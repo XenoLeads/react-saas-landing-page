@@ -12,6 +12,7 @@
   --transition-duration-250: 250ms;
   --animate-infinite-scroll: infinite-scroll 30s linear infinite;
   --animate-top-fade-in: top-fade-in 0.5s ease both;
+  --animate-left-fade-in: left-fade-in 0.5s ease both;
   @keyframes infinite-scroll {
     0% {
       translate: 0%;
@@ -28,6 +29,16 @@
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  @keyframes left-fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

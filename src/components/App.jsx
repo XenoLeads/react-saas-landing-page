@@ -47,24 +47,32 @@ function App() {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const section = entry.target.dataset.section;
+          const element = entry.target;
+          const section = element.dataset.section;
           switch (section) {
             case "hero": {
-              const stagger = Number(entry.target.dataset.stagger || 0);
-              const children = [...entry.target.children];
+              console.log(element);
+              const stagger = Number(element.dataset.stagger || 0);
+              const children = [...element.children];
               children.map((child, index) => {
                 child.style.animationDelay = `${stagger * index}ms`;
                 child.classList.add("animate-top-fade-in");
               });
+              break;
+            }
+            case "how-it-works-steps": {
+              const step_elements = [...element.children];
+              const step_elements_children = step_elements.map(el => [...el.children]);
+              const stagger = Number(element.dataset.stagger || 0);
+              step_elements_children.map((child, child_index) => {
+                child.map((el, el_index) => {
+                  el.style.animationDelay = `${stagger * (el_index + child_index) + stagger * child_index}ms`;
+                  el.classList.add("animate-left-fade-in");
+                });
+              });
+              break;
             }
           }
-          // const animation_type = entry.target.dataset.animationType;
-          // const stagger = Number(entry.target.dataset.stagger || 250);
-          // const children = [...entry.target.children].filter(el => el.hasAttribute("data-animate"));
-          // children.map((child, index) => {
-          //   child.style.animationDelay = `${stagger * index}ms`;
-          //   child.classList.add(`animate-${animation_type}`);
-          // });
         }
       });
     });
@@ -82,7 +90,7 @@ function App() {
       <Hero ref={hero_ref} register={register} />
       <SocialProofLogoBar />
       <Features ref={features_ref} />
-      <HowItWorks ref={how_it_works_ref} />
+      <HowItWorks ref={how_it_works_ref} register={register} />
       <Testimonials />
       <CTA />
       <Footer ref={about_ref} />
