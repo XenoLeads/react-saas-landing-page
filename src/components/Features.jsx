@@ -43,7 +43,7 @@ function FeatureCard({ feature }) {
   const { icon, title, description } = feature;
   const Icon = icon;
   return (
-    <div className="border border-neutral-200 p-6 rounded-md flex flex-col gap-4">
+    <div className="border border-neutral-200 p-6 rounded-md flex flex-col gap-4 transition-[border-color,box-shadow] hover:border-indigo-300 hover:shadow-lg shadow-indigo-50 smooth-timing">
       <div className="bg-indigo-100 w-fit p-3 rounded-lg">{<Icon color="#3F51B5" />}</div>
       <div className="flex flex-col gap-2">
         <h3 className="font-semibold text-xl">{title}</h3>
