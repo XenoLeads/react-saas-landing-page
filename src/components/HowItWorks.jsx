@@ -19,25 +19,19 @@ const HowItWorks = ({ ref, register }) => {
   return (
     <div className="w-full bg-neutral-100 scroll-mt-16" ref={ref}>
       <div className="max-w-7xl mx-auto py-20 flex flex-col justify-start items-center px-8">
-        <div className="flex flex-col justify-center items-center gap-2 w-full">
+        <div ref={register} data-section="default" data-stagger="50" className="flex flex-col justify-center items-center gap-2 w-full">
           <h2 className="text-4xl font-semibold text-center">Get started in minutes</h2>
           <h3 className="text-xl sm:max-w-1/2 text-center text-neutral-500">Three simple steps to transform how your team works together.</h3>
         </div>
         <div ref={register} data-section="how-it-works-steps" data-stagger="100" className="w-full grid grid-cols-3 max-lg:grid-cols-1 gap-8 mt-8">
           {get_started_steps.map(({ title, description }, index) => (
             <div key={title} className="relative flex flex-col justify-start items-start gap-4">
-              <div className="opacity-0 -translate-x-4">
+              <div className="">
                 <p className="text-6xl font-bold text-indigo-300">{`0${index + 1}`}</p>
                 <h4 className="text-2xl font-semibold">{title}</h4>
                 <p className="text-neutral-600">{description}</p>
               </div>
-              {index < 2 ? (
-                <ArrowRight
-                  className="absolute right-0 top-1/2 -translate-y-full max-lg:hidden  opacity-0 -translate-x-4"
-                  color="#9FA8DA"
-                  size={32}
-                />
-              ) : null}
+              {index < 2 ? <ArrowRight className="absolute right-0 top-1/2 -translate-y-full max-lg:hidden" color="#9FA8DA" size={32} /> : null}
             </div>
           ))}
         </div>

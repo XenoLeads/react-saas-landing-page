@@ -50,8 +50,7 @@ function App() {
           const element = entry.target;
           const section = element.dataset.section;
           switch (section) {
-            case "hero": {
-              console.log(element);
+            case "default": {
               const stagger = Number(element.dataset.stagger || 0);
               const children = [...element.children];
               children.map((child, index) => {
@@ -84,6 +83,26 @@ function App() {
     const observer = new IntersectionObserver(observer_callback, options);
     elements.current.forEach(el => observer.observe(el));
 
+    function set_initial_state() {
+      elements.current.forEach(element => {
+        const section = element.dataset.section;
+        switch (section) {
+          case "default": {
+            const children = [...element.children];
+            children.map(child => child.classList.add("-translate-y-4", "opacity-0"));
+            break;
+          }
+          case "how-it-works-steps": {
+            const step_elements = [...element.children];
+            const step_elements_children = step_elements.map(el => [...el.children]);
+            step_elements_children.map(child => child.map(el => el.classList.add("-translate-x-4", "opacity-0")));
+            break;
+          }
+        }
+      });
+    }
+    set_initial_state();
+
     return () => observer.disconnect();
   }, []);
 
@@ -94,7 +113,7 @@ function App() {
       <Header scroll_to={scroll_to} />
       <Hero ref={hero_ref} register={register} />
       <SocialProofLogoBar />
-      <Features ref={features_ref} />
+      <Features ref={features_ref} register={register} />
       <HowItWorks ref={how_it_works_ref} register={register} />
       <Testimonials />
       <CTA />
