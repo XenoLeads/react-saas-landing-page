@@ -63,7 +63,7 @@ const Features = ({ ref }) => {
             Powerful features designed to help your team collaborate better and ship faster.
           </h3>
         </div>
-        <div className="grid grid-cols-3 max-lg:grid-cols-2 gap-8 ">
+        <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8 ">
           {features_content.map(feature => {
             return <FeatureCard key={feature.id} feature={feature} />;
           })}
