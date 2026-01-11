@@ -37,7 +37,7 @@ const Testimonials = ({ register }) => {
   return (
     <div className="w-full">
       <div className="max-w-7xl mx-auto py-20 flex flex-col gap-12 px-8 max-sm:px-4">
-        <div ref={register} data-section="default" data-stagger="50" className="flex flex-col justify-center items-center gap-4">
+        <div ref={register} data-section="default" data-stagger="50" className="flex flex-col justify-center items-center gap-4 text-center">
           <h2 className="font-semibold text-4xl">Loved by teams everywhere</h2>
           <h3 className="text-xl text-neutral-600">See what our customers have to say about TaskFlow.</h3>
         </div>
