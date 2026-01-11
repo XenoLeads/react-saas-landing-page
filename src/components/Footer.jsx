@@ -33,7 +33,7 @@ const Footer = ({ ref }) => {
               <ul className="text-sm text-neutral-400 flex flex-col gap-2">
                 {links.map(link => (
                   <li key={link}>
-                    <a className="cursor-pointer">{link}</a>
+                    <a className="cursor-pointer hover:text-white transition-[color] smooth-timing">{link}</a>
                   </li>
                 ))}
               </ul>
