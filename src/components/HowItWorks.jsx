@@ -29,7 +29,7 @@ const HowItWorks = ({ ref, register }) => {
               <div className="">
                 <p className="text-6xl font-bold text-indigo-300">{`0${index + 1}`}</p>
                 <h4 className="text-2xl font-semibold">{title}</h4>
-                <p className="text-neutral-600">{description}</p>
+                <p className="text-neutral-600 max-w-90/100">{description}</p>
               </div>
               {index < 2 ? <ArrowRight className="absolute right-0 top-1/2 -translate-y-full max-lg:hidden" color="#9FA8DA" size={32} /> : null}
             </div>
