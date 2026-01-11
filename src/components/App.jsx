@@ -115,7 +115,7 @@ function App() {
       <SocialProofLogoBar />
       <Features ref={features_ref} register={register} />
       <HowItWorks ref={how_it_works_ref} register={register} />
-      <Testimonials />
+      <Testimonials register={register} />
       <CTA />
       <Footer ref={about_ref} />
     </div>
