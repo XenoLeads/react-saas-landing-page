@@ -6,7 +6,7 @@ const Header = ({ scroll_to }) => {
   const [isToggledNavbar, setIsToggledNavbar] = useState(false);
   return (
     <header className="h-16 border-b border-neutral-200 w-full fixed top-0 bg-white/50 backdrop-blur-sm z-10 overflow-y-visible">
-      <div className="max-w-7xl mx-auto h-full flex justify-between items-center px-8">
+      <div className="max-w-7xl mx-auto h-full flex justify-between items-center px-8 max-sm:px-4">
         <div className="flex justify-start items-center gap-4 cursor-pointer" onClick={scroll_to} data-scroll-to="hero">
           <img src={logo} alt="Logo" className="h-10 rounded-xl" />
           <h1 className="font-semibold text-2xl">XENO</h1>

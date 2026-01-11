@@ -56,7 +56,7 @@ function FeatureCard({ feature }) {
 const Features = ({ ref,register }) => {
   return (
     <div className="w-full scroll-mt-16" ref={ref}>
-      <div className="max-w-7xl flex flex-col mx-auto gap-12 py-20 px-8">
+      <div className="max-w-7xl flex flex-col mx-auto gap-12 py-20 px-8 max-sm:px-4">
         <div ref={register} data-section="default" data-stagger="50" className="flex flex-col justify-center items-center gap-4">
           <h2 className="font-semibold text-4xl text-centers ">Everything you need to succeed</h2>
           <h3 className="text-xl sm:max-w-1/2 text-center text-neutral-600 ">
