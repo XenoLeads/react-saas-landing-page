@@ -26,12 +26,18 @@ const HowItWorks = ({ ref, register }) => {
         <div ref={register} data-section="how-it-works-steps" data-stagger="100" className="w-full grid grid-cols-3 max-lg:grid-cols-1 gap-8 mt-8">
           {get_started_steps.map(({ title, description }, index) => (
             <div key={title} className="relative flex flex-col justify-start items-start gap-4">
-              <div>
+              <div className="opacity-0 -translate-x-4">
                 <p className="text-6xl font-bold text-indigo-300">{`0${index + 1}`}</p>
                 <h4 className="text-2xl font-semibold">{title}</h4>
                 <p className="text-neutral-600">{description}</p>
               </div>
-              {index < 2 ? <ArrowRight className="absolute right-0 top-1/2 -translate-y-full max-lg:hidden" color="#9FA8DA" size={32} /> : null}
+              {index < 2 ? (
+                <ArrowRight
+                  className="absolute right-0 top-1/2 -translate-y-full max-lg:hidden  opacity-0 -translate-x-4"
+                  color="#9FA8DA"
+                  size={32}
+                />
+              ) : null}
             </div>
           ))}
         </div>
