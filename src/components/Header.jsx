@@ -12,26 +12,40 @@ const Header = ({ scroll_to }) => {
           <h1 className="font-semibold text-2xl">XENO</h1>
         </div>
         <nav className="flex gap-12 items-center">
-          <ul className="flex gap-10 text-neutral-700 max-md:hidden">
+          <ul className="flex gap-10 text-neutral-600 max-md:hidden">
             <li>
-              <a className="cursor-pointer" onClick={scroll_to} data-scroll-to="features">
+              <a
+                className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                onClick={scroll_to}
+                data-scroll-to="features"
+              >
                 Features
               </a>
             </li>
             <li>
-              <a className="cursor-pointer" onClick={scroll_to} data-scroll-to="how-it-works">
+              <a
+                className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                onClick={scroll_to}
+                data-scroll-to="how-it-works"
+              >
                 How it Works
               </a>
             </li>
             <li>
-              <a className="cursor-pointer" onClick={scroll_to} data-scroll-to="about">
+              <a
+                className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                onClick={scroll_to}
+                data-scroll-to="about"
+              >
                 About
               </a>
             </li>
           </ul>
           <div className="flex gap-8 max-md:hidden">
-            <button className="text-indigo-500 cursor-pointer">Sign In</button>
-            <button className="bg-indigo-500 text-white px-4 py-2 rounded-md cursor-pointer">Start Free Trial</button>
+            <button className="text-indigo-500 hover:text-indigo-700 transition-[color] smooth-timing cursor-pointer">Sign In</button>
+            <button className="bg-indigo-500 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-[background-color] smooth-timing cursor-pointer">
+              Start Free Trial
+            </button>
           </div>
           <button className="hidden max-md:inline-block" onClick={() => setIsToggledNavbar(prev => !prev)}>
             {isToggledNavbar ? <X /> : <Menu />}
@@ -45,24 +59,38 @@ const Header = ({ scroll_to }) => {
             <div className="w-fit flex flex-col gap-6 ">
               <ul className="flex flex-col gap-6   text-neutral-700 text-nowrap">
                 <li>
-                  <a className="cursor-pointer" onClick={scroll_to} data-scroll-to="features">
+                  <a
+                    className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                    onClick={scroll_to}
+                    data-scroll-to="features"
+                  >
                     Features
                   </a>
                 </li>
                 <li>
-                  <a className="cursor-pointer" onClick={scroll_to} data-scroll-to="how-it-works">
+                  <a
+                    className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                    onClick={scroll_to}
+                    data-scroll-to="how-it-works"
+                  >
                     How it Works
                   </a>
                 </li>
                 <li>
-                  <a className="cursor-pointer" onClick={scroll_to} data-scroll-to="about">
+                  <a
+                    className="cursor-pointer hover:text-neutral-900 border-b border-b-transparent hover:border-b-neutral-900 transition-[color, border-bottom] smooth-timing"
+                    onClick={scroll_to}
+                    data-scroll-to="about"
+                  >
                     About
                   </a>
                 </li>
               </ul>
               <div className="flex flex-col gap-4 text-nowrap">
-                <button className="text-indigo-500 cursor-pointer">Sign In</button>
-                <button className="bg-indigo-500 text-white px-4 py-2 rounded-md cursor-pointer">Start Free Trial</button>
+                <button className="text-indigo-500 hover:text-indigo-700 transition-[color] smooth-timing cursor-pointer">Sign In</button>
+                <button className="bg-indigo-500 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-[background-color] smooth-timing cursor-pointer">
+                  Start Free Trial
+                </button>
               </div>
             </div>
           </div>

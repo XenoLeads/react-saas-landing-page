@@ -7,3 +7,10 @@
   height: var(--dynamic-container-height, --container-height);
   scroll-margin-top: 4rem;
 }
+
+@theme {
+  --transition-duration-250: 250ms;
+}
+@utility smooth-timing {
+  @apply duration-250 ease-in-out;
+}
