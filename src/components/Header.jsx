@@ -9,7 +9,7 @@ const Header = ({ scroll_to }) => {
       <div className="max-w-7xl mx-auto h-full flex justify-between items-center px-8 max-sm:px-4">
         <div className="flex justify-start items-center gap-4 cursor-pointer" onClick={scroll_to} data-scroll-to="hero">
           <img src={logo} alt="Logo" className="h-10 rounded-xl" />
-          <h1 className="font-semibold text-2xl">XENO</h1>
+          <h1 className="font-semibold text-2xl">Xeno</h1>
         </div>
         <nav className="flex gap-12 items-center">
           <ul className="flex gap-10 text-neutral-600 max-md:hidden">
